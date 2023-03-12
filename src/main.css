@@ -1,0 +1,27 @@
+.bg {
+  background-image: url(./assets/images/hero-bg.png);
+  background-repeat: no-repeat;
+}
+.bg-f{
+  background-image: url(./assets/images/footer.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-position-x: right
+}
+.bg-ff{
+  background-image: url(./assets/images/footer.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-position-x: left
+}
+.form {
+  background-image: url(./assets/images/form.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.shoping {
+  background-image: url(./assets/images/shopingbg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-x: 590px;
+}
