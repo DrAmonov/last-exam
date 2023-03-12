@@ -57,8 +57,8 @@ function Cards() {
 									<img src={product.img} alt="" />
 									<>
 										<img
-											onClick={() => handleAddToLike()}
-											src={`${isLike ? red : yurak}`}
+											onClick={() => handleAddToLike(product)}
+											src={yurak}
 											alt=""
 											className="ml-[-25px] mt-2"
 										/>
