@@ -6,6 +6,10 @@ function Register() {
 	const nameRef = useRef();
 	const passwordRef = useRef();
 
+	const handleReload = () => {
+		window.location.reload()
+	}
+
 	const handleSubmit = (evt) => {
 		evt.preventDefault();
 
@@ -58,10 +62,11 @@ function Register() {
 						Foydalanish shartlarini qabul qilgan xisoblanasiz.
 					</span>
 				</small>
-				<button className="bg-[#53B175] w-[340px] py-2 text-white font-semibold rounded-3xl mt-8">
-					Ro’yxatdan o’tish
-				</button>
+				<button className="bg-[#53B175] w-[340px] py-2 text-white font-semibold rounded-3xl mt-8">Ro’yxatdan o’tish</button>
 			</form>
+			<button onClick={() => handleReload()} className="bg-[#53B175] w-[340px] py-2 text-white font-semibold rounded-3xl mt-8">
+					Asosiy sahifa
+				</button>
 		</div>
 	);
 }

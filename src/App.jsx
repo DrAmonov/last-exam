@@ -12,17 +12,9 @@ function App() {
 	return (
 		<>
 			{localData ? (
-				<Routes>
-					<Route path="/" index element={<Home />} />
-					<Route path="/products" element={<Products />} />
-					<Route path="/shopingpage" element={<ShopingPage />} />
-					<Route path="/likepage" element={<LikePage />} />
-					<Route path="/register" element={<Register />} />
-					<Route path={'/modal'} element={<Modal />} />
-					<Route path="/login" element={<LogIn />} />
-				</Routes>
+				<Home/>
 			) : (
-				<LogIn />
+				<Register />
 			)}
 		</>
 	);
