@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { json, useNavigate } from 'react-router-dom';
 import { useGetAllProductsQuery } from '../../features/ProductApi';
-import { addToCart, addToLike, changeHeartColor } from '../../features/CartSilce';
+import {
+	addToCart,
+	addToLike,
+	changeHeartColor,
+} from '../../features/CartSilce';
 import yurak from '../../assets/images/yurak.svg';
 import red from '../../assets/images/red.svg';
 import Modal from '../Modal/Modal';
@@ -20,11 +24,9 @@ function Cards() {
 
 	const [togle, setTogle] = useState(false);
 
-	const myFunction = (product, id) => {
+	const handleAddToLike = (product) => {
 		dispatch(addToLike(product));
 		history.push('./product');
-
-		changeHeartColor(id)
 	};
 
 	const [modal, setModal] = useState(false);
@@ -33,7 +35,7 @@ function Cards() {
 		setModal((modal) => !modal);
 	};
 
-	let openModal = modal ? 'd-block' : 'd-none'
+	let openModal = modal ? 'd-block' : 'd-none';
 
 	return (
 		<div className="pt-[120px]">
@@ -55,7 +57,7 @@ function Cards() {
 									<img src={product.img} alt="" />
 									<>
 										<img
-										onClick={() => myFunction(id, isLike)}
+											onClick={() => handleAddToLike()}
 											src={`${isLike ? red : yurak}`}
 											alt=""
 											className="ml-[-25px] mt-2"
@@ -86,7 +88,7 @@ function Cards() {
 									</div>
 									<button
 										onClick={(evt) => handleModal(evt)}
-										className='text-slate-400 no-underline mx-auto flex mt-2'>
+										className="text-slate-400 no-underline mx-auto flex mt-2">
 										{product.btn}
 									</button>
 								</div>
